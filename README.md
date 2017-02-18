@@ -1,11 +1,11 @@
-# broccoli--imagemin
+# broccoli-imagemin
 
 Broccoli filter for compressing images with [imagemin](https://github.com/imagemin/imagemin), using v5 configuration syntax.
 
 ## Installation
 
 ```sh
-npm install broccoli--imagemin
+npm install broccoli-imagemin
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install broccoli--imagemin
 ```js
 /* Brocfile.js */
 
-const BroccoliImagemin = require('broccoli--imagemin');
+const BroccoliImagemin = require('broccoli-imagemin');
 
 module.exports = new BroccoliImagemin('images', {
     plugins: [

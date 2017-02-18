@@ -12,8 +12,11 @@ const FIXTURE_DIR = `${__dirname}/fixtures`;
 
 
 const lab = exports.lab = Lab.script();
-const { describe, it, before, afterEach } = lab;
-const { expect } = Code;
+const describe = lab.describe;
+const it = lab.it;
+const before = lab.before;
+const afterEach = lab.afterEach;
+const expect = Code.expect;
 
 
 describe('ImageminFilter', () => {

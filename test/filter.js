@@ -72,7 +72,7 @@ describe('ImageminFilter', () => {
             });
         });
 
-        it('supports custom extensions', (done) => {
+        it('supports custom extensions', () => {
 
             let called = 0;
 

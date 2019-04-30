@@ -1,22 +1,20 @@
 'use strict';
 
 const Fs = require('fs');
-const Code = require('code');
-const Lab = require('lab');
+
 const Broccoli = require('broccoli');
+const Code = require('@hapi/code');
 const ImageminJpegTran = require('imagemin-jpegtran');
 const ImageminFilter = require('..');
+const Lab = require('@hapi/lab');
 
 
 const FIXTURE_DIR = `${__dirname}/fixtures`;
 
 
 const lab = exports.lab = Lab.script();
-const describe = lab.describe;
-const it = lab.it;
-const before = lab.before;
-const afterEach = lab.afterEach;
-const expect = Code.expect;
+const { afterEach, before, describe, it } = lab;
+const { expect } = Code;
 
 
 describe('ImageminFilter', () => {
@@ -42,24 +40,21 @@ describe('ImageminFilter', () => {
             });
         };
 
-        before((done) => {
+        before(() => {
 
             Fs.readdirSync(FIXTURE_DIR).forEach((e) => {
 
                 fixtures[e] = Fs.statSync(`${FIXTURE_DIR}/${e}`);
             });
-
-            done();
         });
 
-        afterEach((done) => {
+        afterEach(() => {
 
             const b = builder;
             builder = null;
             if (b) {
                 b.cleanup();
             }
-            done();
         });
 
         it('produces smaller files', () => {

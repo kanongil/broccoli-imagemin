@@ -1,6 +1,6 @@
 {
   "name": "broccoli-imagemin",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Broccoli filter for compressing images with imagemin",
   "main": "lib/index.js",
   "engines": {
